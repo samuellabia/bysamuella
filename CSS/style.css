@@ -1,0 +1,16 @@
+header{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    }
+    
+.navigation a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 15px;
+    }
+    
+.navigation a:hover {
+    color: #007BFF;
+}
+    
