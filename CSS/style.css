@@ -14,6 +14,7 @@ body#index {
 
 header {
     grid-row: 1; /*header sur la première ligne*/
+    display:flex;
 }
 
 .nom {
@@ -21,7 +22,7 @@ header {
     font-size:2em ; /*augmenter la taille de la police pour afficher en grand*/
 }
 
-.containeurTexteIndex {
+main{
     grid-row:3; /*3 ème ligne: la plus volumineuse*/
     display:flex; /*avoir la photo et ma decriptio cote à cote*/
 }
