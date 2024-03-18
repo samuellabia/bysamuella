@@ -6,57 +6,40 @@ html{
 }
 
 
-.containeurIndex {
+body#index {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* Crée trois rangées : une pour la navigation, une pour le contenu, et une pour le pied de page */
-    height: 100vh; /* Fait en sorte que le conteneur prenne toute la hauteur de la fenêtre de visualisation */
+    grid-template-rows: 1fr 2fr auto 1fr; /*4lignes*/
+    height: 100vh;
 }
 
 header {
-    grid-row: 1; /* Place la barre de navigation dans la première rangée */
+    grid-row: 1; /*header sur la première ligne*/
 }
 
-.moi, .projet {
-    grid-row: 2; /* Place les textes "moi" et "projet" dans la deuxième rangée */
+.nom {
+    grid-row: 2;  /*mon nom sur la deuxième ligne*/
+    font-size:2em ; /*augmenter la taille de la police pour afficher en grand*/
 }
 
-/*
-(footer {
-    grid-row: 3; /* Place
-/*Page index
-#index{
-    /*padding:5% 5%;
-    /*width:100vw;
-    min-height:100vh;
-    border:2mm;
-    display:grid;
-}*/
-
-/*containeur de mon texte index
 .containeurTexteIndex {
-    display: grid;
-    grid-template-columns: 1fr 1fr;  Crée deux colonnes de largeur égale 
-    gap: 20px; /*espace de 20px entre les colonnes 
+    grid-row:3; /*3 ème ligne: la plus volumineuse*/
+    display:flex; /*avoir la photo et ma decriptio cote à cote*/
 }
 
-.moi {
-    grid-column: 1; /* le texte "moi" dans la première colonne 
+.photo {
+    width: 50%; /*la moitié de la largeur de .containeurTexteIndex */
 }
 
-.projet {
-    grid-column: 2; /* le texte "projet" dans la deuxième colonne 
+.about {
+    width: 50%; /*l'autre moitié de la largeur de .containeurTexteIndex */
+}
+
+footer {
+    grid-row: 4; /*deenière ligne en bas de page*/
 }
 
 
 
-
-
-header{
-    display: flex;
-    justify-content: flex-end;
-    padding: 20px;
-}
-*/
 .navigation a {
     color: #333;
     text-decoration: none;
