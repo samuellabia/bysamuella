@@ -1,42 +1,58 @@
+/*Page accueil*/
 html{
     font-size:16px;
     font-family:sans-serif;
-    background-color:  #dde8b9;
     max-height: fit-content;
 }
 
-
-body#index {
+body{
     display: grid;
-    grid-template-rows: 1fr 2fr auto 1fr; /*4lignes*/
+    grid-template-rows: 1fr 3fr 0.5fr; /*4lignes*/
     height: 100vh;
+    background-color:#EEF8FF;
 }
 
 header {
-    grid-row: 1; /*header sur la première ligne*/
-    display:flex;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
+    background-color: #333;
 }
 
-.nom {
-    grid-row: 2;  /*mon nom sur la deuxième ligne*/
-    font-size:2em ; /*augmenter la taille de la police pour afficher en grand*/
+#top-row {
+    display: flex;
+    justify-content: space-between; /* Aligne les éléments enfants (nav, form) horizontalement avec un espace maximum entre eux */
+    width: 100%; /* Prend toute la largeur de la ligne */
 }
+
+#bottom-row {
+    width: 100%; /* Prend toute la largeur de la ligne */
+    text-align: center;
+}
+/*header {
+    grid-row: 1;
+    display:flex;
+    flex-direction:column ;
+    background-color:#624763;
+}
+
+header p{
+
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100%;
+    text-align: center;
+    /*color: bisque;
+}
+*/
 
 main{
-    grid-row:3; /*3 ème ligne: la plus volumineuse*/
-    display:flex; /*avoir la photo et ma decriptio cote à cote*/
-}
-
-.photo {
-    width: 50%; /*la moitié de la largeur de .containeurTexteIndex */
-}
-
-.about {
-    width: 50%; /*l'autre moitié de la largeur de .containeurTexteIndex */
+    grid-row:2; /*3 ème ligne: la plus volumineuse*/
+    display:grid; /*avoir la photo et ma decriptio cote à cote*/
+    grid-template-columns:1fr 2fr;
 }
 
 footer {
-    grid-row: 4; /*deenière ligne en bas de page*/
+    grid-row: 3; /*deenière ligne en bas de page*/
+    background-color:#C62E65;
 }
 
 
@@ -51,4 +67,21 @@ footer {
     color: #007BFF;
 }
 
+
+
+
+/*Formulaire de contact pour mes élémens HTML*/
+
+form{
+    width:80%;
+}
+
+
+form label,
+form input,
+form textarea,
+form .button {
+    display: block;
+    margin-bottom: 10px; /* Ajoute un peu d'espace entre les éléments */
+}
 
