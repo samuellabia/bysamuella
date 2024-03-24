@@ -68,20 +68,3 @@ footer {
 }
 
 
-
-
-/*Formulaire de contact pour mes élémens HTML*/
-
-form{
-    width:80%;
-}
-
-
-form label,
-form input,
-form textarea,
-form .button {
-    display: block;
-    margin-bottom: 10px; /* Ajoute un peu d'espace entre les éléments */
-}
-
