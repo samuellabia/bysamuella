@@ -1,21 +1,24 @@
-/*Page accueil*/
+
 html{
     font-size:16px;
     font-family:sans-serif;
-    max-height: fit-content;
+    height:100%;
 }
 
 body{
     display: grid;
-    grid-template-rows: 1fr 3fr 1fr;
-    height:100%;
+    grid-template-rows: 100px  auto 100px;
+    gap:20px;
     background-color:#FEFDED;
+    height: 100%;
 }
+
 
 header {
     grid-row: 1;
     display: flex;
-    flex-direction: column; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
+    flex-direction:column;
+    background-color: #A29BFE; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
 }
 
 #top {
@@ -24,7 +27,7 @@ header {
     width: 100%; /* Prend toute la largeur de la ligne */
 }
 
-header h1{
+/*header h1{
 
     font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     width: 100%;
@@ -32,20 +35,29 @@ header h1{
     color: rgb(150, 44, 148);
     background-color:#FA7070;
 
-}
+}*/
+
 
 main{
-    grid-row:2; /*3 ème ligne: la plus volumineuse*/
-    display:grid; /*avoir la photo et ma decription cote à cote*/
-    grid-template-columns:1fr 2fr;
+    grid-row:2/3;/*avoir la photo et ma decription cote à cote*/
+    display:grid;
+    grid-template-rows:auto; 
+    grid-template-columns:1fr 1fr;
 }
 
+
 .about{
+    grid-row: 3;
     display: flex;
-    flex-direction: column;
+    flex-direction:row;
     align-items: center;
 }
 
+.projets{
+    grid-row:3;
+    display:flex;
+    flex-direction: column;
+}
 
 .about img{
     width: 100%;
@@ -54,28 +66,18 @@ main{
 }
 
 
-main section{
+main section{ 
     display:flex;
-    flex-direction:column;
+    flex-direction:row;
     flex-wrap: wrap;
-    align-items: center;
 }
+
 
 footer {
     grid-row: 3; /*deenière ligne en bas de page*/
-    background-color:#C6EBC5;
+    background-color:#A29BFE;
 }
 
 
-
-.navigation a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 15px;
-    }
-    
-.navigation a:hover {
-    color: #007BFF;
-}
 
 
