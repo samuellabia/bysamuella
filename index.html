@@ -10,70 +10,112 @@
 
 <body>
     <header>
-        <div id="top">
             <nav>
-                <a href="Contact.html" >CONTACT</a> <!--contient mon formulaire de contact-->
-                <a href="about" >A PROPOS</a>
+                <ul>
+                <a href="#"> ACCUEIL</a>
+                <a href="#" >A PROPOS</a>
+                <a href="#" >CONTACT</a> <!--contient mon formulaire de contact-->
+                <select id="langSelect">
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                </select>
+                
+                
+                <form action="#" method="get" id="recherche">
+                    <label for="search"></label>
+                    <input type="text" id="search" name="search">
+                    <input type="submit" value="Rechercher">
+                </form>
+                </ul>
+
+                <!--<img src="IMG/Jb_logo.svg" alt="#">-->
             </nav>
-            <form action="#" method="get" id="recherche">
-                <label for="search"></label>
-                <input type="text" id="search" name="search">
-                <input type="submit" value="Rechercher">
-            </form>
-        </div>
-        <img src="IMG/logo.jpeg" alt="">      
+            <img src="IMG/header.webp" alt="">
+
+              
     </header>
 
     <main>
     
-        <section class="about">
+        <section>
+            <div class="about">
             <h1>Qui suis-je?</h1>
+            
             <img src="IMG/Moi.jpg" alt="">
+            </div>
             <p>
                 Lorem ipsum dolor sit amet. Ea distinctio nisi sed quasi excepturi et dolorum tempora vel consequatur omnis. A quaerat odio ab consequatur voluptas in accusantium aspernatur ut aliquam expedita aut quaerat sunt qui explicabo ipsam. Et cupiditate nulla eos natus pariatur sed officiis quis.
                 Et omnis tenetur ut perspiciatis cupiditate a cumque earum est assumenda facere qui consequatur commodi ut quos rerum. A aliquid repudiandae id consequatur velit id error itaque sit voluptate magnam est soluta alias vel nostrum deleniti. Et deserunt architecto vel dignissimos quos et ipsum tenetur in ratione quis. 
             </p>
+           
         </section>
         
         <section class="projets">
-            <h1>Mes projets</h1>
-            
+        <h1>Mes projets</h1>
+        <nav>
             <article>
-                <h2>Sokoban</h2>
-                <img src="IMG/Sokoban.png" alt="">
+                <h2> Jeu Sokoban</h2>
+                <img src="IMG/pexels-pixabay-207580.jpg" alt="">
                 <p>Elaboration du jeu Sokoban en mode console</p>
             </article>
 
             <article>
-                <h2>Space Invaders  
+                <h2>Jeu Space Invaders  
                 </h2>
-                <img src="IMG/Invaders.png" alt="">
+                <img src="IMG/pexels-pixabay-207580.jpg" alt="">
+                <p>Projet2</p>
             </article>
 
             <article>
                 <h2>
-                    cryptographie
+                    Jeu de puzzle
                 </h2>
-                <img src="IMG/cryptographie.jpeg" alt="">
+                <img src="IMG/pexels-pixabay-207580.jpg" alt="">
+                <p> projet</p>
             </article>
 
             <article>
-                <h2>Projet4</h2>
+                <h2>Analyseur de sentiment des tweets</h2>
+                <img src="IMG/pexels-pixabay-207580.jpg" alt="">
+                <p> Un outil qui utilise l'apprentissage automatique pour analyser le sentiment des tweets</p>
             </article>
             
 
             <article>
-                <h2>Projet5</h2>
+                <h2>Application de suivi des dépenses</h2>
+                <img src="IMG/pexels-pixabay-207580.jpg" alt="">
+                <p> </p>
             </article>
 
             <article>
-                <h2>Projet6</h2>
-
+                <h2>Application de réservation de restaurant</h2>
+                <img src="IMG/pexels-pixabay-207580.jpg" alt="">
+                <p> projet</p>
             </article>
 
+            <section class="form">
+                <h1>Me contacter</h1>
 
-
-        </section>
+            </section>
+        </nav>
+    </section>
+    <section class="form">
+        <form action="#" method="post"> 
+            <label for="name">Nom</label>
+            <input type="text" id="name" name="user_name" />
+    
+            <label for="email"> Email</label>
+            <input type="email" id="mail" name="user_mail" />
+    
+            <label for="msg">Message</label>
+            <textarea id="msg" name="user_message"></textarea>
+    
+            <div class="button">
+                <button type="submit">Envoyer le message</button>
+            </div>
+              
+        </form>
+    </section>
 
     </main>
 
@@ -83,6 +125,10 @@
         <small>Copyright © 2023 JELDI BIA SAMUELLA</small>
     </footer>
     
+       
+    
+    <script src="JS/lange.js"></script>
+    <script src="JS/traduction.js"></script>
     
 
 </body>
