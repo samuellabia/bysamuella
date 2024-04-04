@@ -6,7 +6,7 @@ html{
 
 
 body{
-    background-color:#e0e5e9;
+    background-color:#f2ebe5;
     height: 100%;
 }
 
@@ -17,14 +17,14 @@ header{
     position:relative;
 }
 header  nav ul{
-    margin: 1px;;
+    margin: 1px;
     width:100%;
     display: flex;
     flex-direction:row; /*nav et img*/
     gap:1rem; /*espace de la taille de 16 px;*/
     justify-content:flex-end; 
     align-items: center;
-    background-color: #A29BFE; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
+    background-color:#647295; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
 }
 
 header img{
@@ -93,7 +93,7 @@ main .projets{
 
 h1{
     text-align: center;
-    background-color: blue;
+    background-color:#9f496e;
     width:100%;
 }
 
@@ -160,5 +160,5 @@ main button:hover{
 
 footer {
     height:1.5rem;
-    background-color:#A29BFE;
+    background-color:#647295;
 }
