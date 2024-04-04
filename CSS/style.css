@@ -27,11 +27,19 @@ header  nav ul{
     background-color:#647295; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
 }
 
-header img{
+img{
     width:100%;
     height: 2.5 rem;
+    border-radius:15px;
 
 }
+
+/*header img{
+    width:100%;
+    height: 2.5 rem;
+    border-radius:10px;
+
+}*/
 header h1 {
     position: absolute;
     background-color:black;
@@ -97,11 +105,12 @@ h1{
     width:100%;
 }
 
-#about img{
+/*#about img{
     width: 100%;
     height:2 rem;
 
-}
+
+}*/
 
 .projets img{
     width:100%;
