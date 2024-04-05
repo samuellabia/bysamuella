@@ -37,13 +37,11 @@ document.querySelector('#contact form button').addEventListener('click',function
     }
 
 
-
-
     let messageTextarea = document.getElementById('msg')
     //si le message est soumis sans aucun caractère, une erreur 
     if (messageTextarea.value==''){
-        lastNameInput.classList.add('error')
-        lastNameInput.previousElementSibling.classList.add('error')
+        messageTextarea.classList.add('error')
+        messageTextarea.previousElementSibling.classList.add('error')
         
     }
     //console.log(messageTextarea) vérification
