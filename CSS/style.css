@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
 html{
     font-size:16px;
     font-family:sans-serif;
@@ -41,6 +42,7 @@ img{
 
 }*/
 header h1 {
+    font-family:"Abril Fatface",serif;
     position: absolute;
     background-color:black;
     top: 50%;
@@ -146,6 +148,15 @@ main form div input,main form div textarea {
     border: 1px  solid #ccc;
     outline:none; /*enlever la ligne rouge qui s'affiche dès qu'on est dans l'un d'entre eux */
     
+}
+
+main form div input.error,main form div textarea.error{
+    border: 1px solid red; /*bordure devient rouge quand il y a une erreur*/
+    background-color: #FFCCCC; /* couleur de fond rouge clair */
+}
+
+main form div label.error{
+    color:red;
 }
 
 main button {
