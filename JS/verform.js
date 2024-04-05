@@ -27,8 +27,14 @@ document.querySelector('#contact form button').addEventListener('click',function
 
     
     let mailInput=document.getElementById('mail')
-    console.log(mailInput)
-    console.log(mailInput.value.match(regExInputMail))
+    //console.log(mailInput)
+    //console.log(mailInput.value.match(regExInputMail)) vérificaion
+
+    if (mailInput.value.match(regExInputMail)==null){
+        mailInput.classList.add('error')
+        mailInput.previousElementSibling.classList.add('error')
+
+    }
 
 
 
