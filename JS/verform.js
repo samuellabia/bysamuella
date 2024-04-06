@@ -1,6 +1,9 @@
 document.querySelector('#contact form button').addEventListener('click', function (event) {
     event.preventDefault() //on empeche le clic de soumettre tout de suite le formulaire
 
+    
+    let errone=true //variable booléenne pour la soumission du formulaire
+
 
     const regExInput = /^[a-zA-Z-]{1,50}$/
     //console.log(firstNameInput)
@@ -14,6 +17,8 @@ document.querySelector('#contact form button').addEventListener('click', functio
         else {
             this.classList.remove('error')
             this.previousElementSibling.classList.remove('error')
+            
+            errone=false
         }
     }
 
@@ -64,6 +69,8 @@ document.querySelector('#contact form button').addEventListener('click', functio
             mailInput.classList.remove('error')
             mailInput.previousElementSibling.classList.remove('error')
 
+            errone=false
+
 
 
         }
@@ -90,6 +97,7 @@ document.querySelector('#contact form button').addEventListener('click', functio
         else {
             messageTextarea.classList.remove('error')
             messageTextarea.previousElementSibling.classList.remove('error')
+            errone=false
 
 
 
@@ -97,7 +105,9 @@ document.querySelector('#contact form button').addEventListener('click', functio
 
     })
 
-
+    if (!errone){
+        document.querySelector('#contact form button').submit()
+    }
 
 
 }
