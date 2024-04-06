@@ -2,7 +2,7 @@ document.querySelector('#contact form button').addEventListener('click', functio
     event.preventDefault() //on empeche le clic de soumettre tout de suite le formulaire
 
 
-    const regExInput = /^[a-zA-Z-]{3,50}$/
+    const regExInput = /^[a-zA-Z-]{1,50}$/
     //console.log(firstNameInput)
     //console.log(firstNameInput.value.match(regExInput))
     const inputVerif = function () {
