@@ -1,10 +1,7 @@
 document.querySelector('#contact form button').addEventListener('click', function (event) {
-    event.preventDefault() //on empeche le clic de soumettre tout de suite le formulaire
 
-    
+
     let errone=true //variable booléenne pour la soumission du formulaire
-
-
     const regExInput = /^[a-zA-Z-]{1,50}$/
     //console.log(firstNameInput)
     //console.log(firstNameInput.value.match(regExInput))
@@ -106,7 +103,11 @@ document.querySelector('#contact form button').addEventListener('click', functio
     })
 
     if (!errone){
-        document.querySelector('#contact form button').submit()
+        document.querySelector('#contact form').submit()
+    }
+
+    if (zrrone){
+        event.preventDefault()
     }
 
 
