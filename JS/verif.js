@@ -5,7 +5,7 @@ form.addEventListener('submit', validation, false)
 
 
 var errors = [] //yableau d'erreurs 
-var fields = ["fistname, lastname, email,msg"] //tableau de champs
+var fields = ["firstname", "lastname", "mail","msg"] //tableau de champs id
 
 function validation(event) {
     fields.forEach(function (fieldId) {
