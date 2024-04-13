@@ -8,16 +8,12 @@ html{
     font-family:sans-serif;
 }
 
-.home{
+body{
+    background-color:#f2ebe5;
     min-height:100dvh;
     display:grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns:minmax(0,1fr);
-
-}
-
-body{
-    background-color:#f2ebe5;
     
 }
 
