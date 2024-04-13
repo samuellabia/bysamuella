@@ -1,21 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap'); /*styled de polices */
 html{
     font-size:16px;
     font-family:sans-serif;
     height:100%;
 }
 
-
 body{
     background-color:#f2ebe5;
-    height: 100%;
+    display:flex;
+    flex-direction:column;
+    justify-content: space-between; 
+    margin:0;
+    /*height: 100%;*/
+    
 }
 
 
 /*HEADER*/
 
 header{
-    position:relative;
+    position:relative; /*par rapport à ma photo */
 }
 header  nav ul{
     margin: 1px;
@@ -30,17 +34,11 @@ header  nav ul{
 
 img{
     width:100%;
-    height: 2.5 rem;
     border-radius:15px;
 
 }
 
-/*header img{
-    width:100%;
-    height: 2.5 rem;
-    border-radius:10px;
 
-}*/
 header h1 {
     font-family:"Abril Fatface",serif;
     position: absolute;
@@ -56,7 +54,6 @@ header h1 {
 
 
 /*MAIN*/
-
 main section:nth-child(1){
     display:flex;
     flex-direction:row; /* séparation de qui suis je+ photo et le paragraphe.*/
@@ -71,8 +68,8 @@ main section:nth-child(2){
 
 main section nav{
     display:grid;
-    grid-template-rows:1fr 1fr;
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+    grid-template-rows:1fr 1fr; /*photo et court paragraphe descriptif*/
+    grid-template-columns:repeat(auto-fit,minmax(400px,1fr)); /*différents projets*/
     gap: 15px;
 
 }
@@ -107,19 +104,12 @@ h1{
     width:100%;
 }
 
-/*#about img{
-    width: 100%;
-    height:2 rem;
-
-
-}*/
 
 .projets img{
     width:100%;
     height:50%
 
 }
-
 
 
 
@@ -133,12 +123,18 @@ h1{
     border-radius: 5px; /*arrondir les bords*/
 }
 
+main form{
+    display:flex;
+    flex-direction:column;
+}
+
 main form div{
     display:grid;
     grid-template-columns:70px 1fr;/*label et input*/
     grid-gap:15px;
     margin: 20px 20px;
 }
+
 
 main form div input,main form div textarea {
     width: 100%;
@@ -147,17 +143,11 @@ main form div input,main form div textarea {
     border-radius: 4px;
     border: 1px  solid #ccc;
     outline:none; /*enlever la ligne rouge qui s'affiche dès qu'on est dans l'un d'entre eux */
-    
 }
 
-main form div input.error,main form div textarea.error{
-    border: 1px solid red; /*bordure devient rouge quand il y a une erreur*/
-    background-color: #FFCCCC; /* couleur de fond rouge clair */
-}
 
-main form div label.error{
-    color:red;
-}
+
+
 
 main button {
     padding: 10px 20px;
@@ -174,11 +164,20 @@ main button:hover{
 
 
 
+/*validation*/
+main form div input.error,main form div textarea.error{
+    border: 1px solid red; /*bordure devient rouge quand il y a une erreur*/
+    background-color: #FFCCCC; /* couleur de fond rouge clair */
+}
+
+main form div label.error{
+    color:red;
+}
 
 
 /*FOOTER*/
 
 footer {
-    height:1.5rem;
+    height: 1em;
     background-color:#647295;
 }
