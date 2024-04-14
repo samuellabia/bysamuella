@@ -1,0 +1,6 @@
+Sokoban est un jeu de puzzle stimulant qui a été développé en Langage C. Dans ce jeu, le joueur doit déplacer des boîtes à travers un labyrinthe complexe pour les placer à des emplacements spécifiques. Le défi réside dans le fait que les boîtes ne peuvent être poussées qu’une à la fois, et ne peuvent pas être tirées. Le jeu met l’accent sur la logique et la stratégie, car le joueur doit planifier ses mouvements à l’avance pour éviter de se retrouver dans une impasse. Avec des graphiques attrayants et une jouabilité intuitive, Sokoban offre une expérience de jeu captivante qui mettra à l’épreuve votre esprit.
+
+
+
+
+
