@@ -75,7 +75,8 @@ class Project {
         );
     }
 
-    try{function insertProject($title, $image_path, $technologies,$description, $details_link) {
+    function insertProject($title, $image_path, $technologies,$description, $details_link) {
+        try{
         $statement = $this->db->pdo->prepare(
             'INSERT INTO projets(title, image,technologie,description, details_link) VALUES(:title, :image,:technologie,:description, :details_link)'
         );
@@ -90,10 +91,28 @@ class Project {
         //exécution de la requete
         $statement->execute();
     }
-    catch(PDOexception e){
+    catch(PDOexception $e){
         echo "Erreur lors de l'insertion du projet : " . $e->getMessage();
-
 
     }
     }
 }
+
+
+$db = new Database(); //
+
+$user = new User($db);
+
+// Vérification  si le formulaire a été soumis
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Obtention des  données du formulaire
+    
+    $firstName = htmlspecialchars($_POST["user_firstname"]);
+    $lastName =htmlspecialchars($_POST["user_name"]);
+    $email = htmlspecialchars($_POST["user_mail"]);
+    $message = htmlspecialchars($_POST["user_message"]);
+
+    // Insértion de  l'utilisateur dans la base de données
+    $user->insertUser($firstName, $lastName, $email, $message);
+}
+
