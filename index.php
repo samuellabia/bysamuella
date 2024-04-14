@@ -1,3 +1,5 @@
+<?php include 'PHP/form.php'; ?>
+
 <!doctype html>
 <html lang="fr">
 
@@ -9,7 +11,7 @@
 </head>
 
 
-<body class="home">
+<body>
     <?php include "PHP/header.php" ?>
 
     <main>
@@ -85,7 +87,7 @@
         </section>
         <section id="contact">
             <h1>Me contacter</h1>
-            <form action="" method="post">
+            <form action="PHP/form.php" method="post">
                 <div class="errors"></div>
                 <div>
                     <label for="firstname">Prénom</label>
@@ -114,12 +116,10 @@
         </section>
 
     </main>
-    <?php include "PHP/footer.php" ?>
-
-
+    <footer>
+        <small>Copyright © 2024 JELDI BIA SAMUELLA</small>
+    </footer>
     <script src="JS/form.js"></script>
-
-
 </body>
 
 </html>
