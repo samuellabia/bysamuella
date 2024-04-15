@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,8 @@
 </head>
 
 <body class="detail">
-    <?php include "PHP/header.php" ?>
+    <?php include "PHP/header.php"; ?>
+
     <main>
         <article>
             <h1>
@@ -17,8 +18,6 @@
             </h1>
 
             <h2>Description</h2>
-
-
             <p>
                 Sokoban est un jeu de puzzle classique où le joueur contrôle un personnage qui
                 doit pousser des boîtes vers des emplacements de stockage désignés. Le jeu se joue sur
@@ -30,14 +29,6 @@
 
             <h2>Technologies utilisées</h2>
             <p2> Jeu entièrement codé en langage C</p2>
-
-            <h2>Challenges rencontrés</h2>
-            <p>
-                <ul>
-                    <li>La gestion des mouvements</li>
-                    <li>Les erreurs de segmentation</li>
-                </ul>
-            </p>
 
             <h2>Quelques images de notre jeu</h2>
             <img src="IMG/sokoban.png" alt="visualisation du jeu sokoban en console">
