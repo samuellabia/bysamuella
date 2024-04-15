@@ -126,6 +126,23 @@ class Project
 
         }
     }
+    function listeProjets()
+    {
+        $projets = array();
+
+        try {
+            $statement = $this->db->pdo->prepare('SELECT * FROM projets');
+            $statement->execute();
+
+            while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
+                $projets[] = $row;
+            }
+        } catch (PDOException $e) {
+            echo "Erreur lors de la récupération des projets : " . $e->getMessage();
+        }
+
+        return $projets;
+    }
 }
 
 $db = new Database(); //
@@ -142,4 +159,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insértion de  l'utilisateur dans la base de données
     $user->insertUser($firstName, $lastName, $email, $message);
 }
-
