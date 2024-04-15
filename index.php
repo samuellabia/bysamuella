@@ -1,8 +1,6 @@
-<?php include 'PHP/form.php'; ?>
-
+<?php include 'DB/database.php'; ?>
 <!doctype html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,15 +8,12 @@
     <title>Portfolio de JELDI</title>
 </head>
 
-
 <body>
-    <?php include "PHP/header.php" ?>
-
+    <?php include "PHP/header.php"; ?>
     <main>
-
         <section>
             <div id="about">
-                <h1>Qui suis-je?</h1>
+                <h2>Qui suis-je?</h2>
 
                 <img src="IMG/Moi.jpg" alt="Photo de mon bitmoji">
             </div>
@@ -33,61 +28,30 @@
             </p>
 
         </section>
+        <?php
+            $db = new Database();
+            $project = new Project($db);
+            $projects = $project->listeProjets();
+        ?>
+
 
         <section class="projets">
-            <h1>Mes projets</h1>
+            <h2>Mes projets</h2>
             <nav>
-                <article>
-                    <h2> Jeu Sokoban</h2>
-                    <img src="IMG/sokoban.png" alt="">
-                    <p>Elaboration du jeu Sokoban en mode console</p>
-                    <a href="details.php">Lire plus</a>
-                </article>
-
-                <article>
-                    <h2>Jeu Space Invaders
-                    </h2>
-                    <img src="IMG/invaders.png" alt="">
-                    <p>Projet2</p>
-                    <a href="details.php">Lire plus</a>
-                </article>
-
-                <article>
-                    <h2>
-                        Jeu de puzzle
-                    </h2>
-                    <img src="IMG/puzzle.jpeg" alt="">
-                    <p> projet</p>
-                    <a href="details.php">Lire plus</a>
-                </article>
-
-                <article>
-                    <h2>Analyseur de sentiment des tweets</h2>
-                    <img src="IMG/analyseur.png" alt="">
-                    <p> Un outil qui utilise l'apprentissage automatique pour analyser le sentiment des tweets</p>
-                    <a href="details.php">Lire plus</a>
-                </article>
-
-
-                <article>
-                    <h2>Application de suivi des dépenses</h2>
-                    <img src="IMG/pexels-pixabay-207580.jpg" alt="">
-                    <p> </p>
-                    <a href="details.php">Lire plus</a>
-                </article>
-
-                <article>
-                    <h2>Application de réservation de restaurant</h2>
-                    <img src="IMG/pexels-pixabay-207580.jpg" alt="">
-                    <p> projet</p>
-                    <a href="details.php">Lire plus</a>
-                    
-                </article>
+                <?php foreach ($projects as $project) : ?>
+                    <article>
+                        <h3><?php echo $project['title']; ?></h3>
+                        <img src="<?php echo $project['image']; ?>" alt="illustration du projet <?php echo $project['title']; ?>">
+                        <a href="details.php">Lire plus</a>
+                    </article>
+                <?php endforeach; ?>
             </nav>
+            
+            <button id="voir-plus">Charger plus de projets</button>
         </section>
         <section id="contact">
-            <h1>Me contacter</h1>
-            <form action="PHP/form.php" method="post">
+            <h2>Me contacter</h2>
+            <form action="DB/database.php" method="post">
                 <div class="errors"></div>
                 <div>
                     <label for="firstname">Prénom</label>
@@ -111,15 +75,10 @@
 
 
                 <button type="submit">Envoyer le message</button>
-
             </form>
         </section>
-
     </main>
-    <footer>
-        <small>Copyright © 2024 JELDI BIA SAMUELLA</small>
-    </footer>
+    <?php include "PHP/footer.php"; ?>
     <script src="JS/form.js"></script>
 </body>
-
 </html>
