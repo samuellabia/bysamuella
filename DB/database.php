@@ -126,23 +126,56 @@ class Project
 
         }
     }
-    function listeProjets()
-    {
+    
+
+    public function listeProjets($limit = null, $offset = 0) {
         $projets = array();
-
+    
         try {
-            $statement = $this->db->pdo->prepare('SELECT * FROM projets');
+            // Préparation de  la requête SQL
+            if ($limit) {
+                $sql = 'SELECT * FROM projets LIMIT :limit OFFSET :offset';
+            } else {
+                $sql = 'SELECT * FROM projets';
+            }
+    
+            $statement = $this->db->pdo->prepare($sql);
+    
+            // Liaison de  la valeur de la limite si elle est définie
+            if ($limit) {
+                $statement->bindValue(':limit', $limit, PDO::PARAM_INT);
+                $statement->bindValue(':offset', $offset, PDO::PARAM_INT);
+            }
+    
+            // Exécution de  la requête
             $statement->execute();
-
+    
+            // Récupération de  tous les projets
             while ($row = $statement->fetch(PDO::FETCH_ASSOC)) {
                 $projets[] = $row;
             }
         } catch (PDOException $e) {
             echo "Erreur lors de la récupération des projets : " . $e->getMessage();
         }
-
+    
         return $projets;
     }
+    
+    function getProjectById($id)
+{
+    try {
+        $statement = $this->db->pdo->prepare('SELECT * FROM projets WHERE id = :id');
+        $statement->bindValue(':id', $id, PDO::PARAM_INT);
+        $statement->execute();
+
+        return $statement->fetch();
+    } catch (PDOException $e) {
+        echo "Erreur lors de la récupération du projet : " . $e->getMessage();
+    }
+
+    return null;
+}
+
 }
 
 $db = new Database(); //
