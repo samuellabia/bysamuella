@@ -12,17 +12,9 @@
     <?php include "PHP/header.php"; ?>
     <main>
         <section>
-            <div id="about">
-                <img src="IMG/Moi.jpg" alt="Photo de mon bitmoji">
-            </div>
+            <img src="IMG/Moi.jpg" alt="Photo de mon bitmoji">
             <p>
-                Lorem ipsum dolor sit amet. Ea distinctio nisi sed quasi excepturi et dolorum tempora vel consequatur
-                omnis. A quaerat odio ab consequatur voluptas in accusantium aspernatur ut aliquam expedita aut quaerat
-                sunt qui explicabo ipsam. Et cupiditate nulla eos natus pariatur sed officiis quis.
-                Et omnis tenetur ut perspiciatis cupiditate a cumque earum est assumenda facere qui consequatur commodi
-                ut quos rerum. A aliquid repudiandae id consequatur velit id error itaque sit voluptate magnam est
-                soluta alias vel nostrum deleniti. Et deserunt architecto vel dignissimos quos et ipsum tenetur in
-                ratione quis.
+                Bienvenue sur mon site web ! Ici, vous trouverez une collection de projets qui m'inspirent et me passionnent.
             </p>
 
         </section>
@@ -31,7 +23,6 @@
             $project = new Project($db);
             $projects = $project->listeProjets(3); //3 projets au début
         ?>
-
 
         <section class="projets">
             <h2>Mes projets</h2>
