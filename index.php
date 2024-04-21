@@ -13,8 +13,6 @@
     <main>
         <section>
             <div id="about">
-                <h2>Qui suis-je?</h2>
-
                 <img src="IMG/Moi.jpg" alt="Photo de mon bitmoji">
             </div>
             <p>
@@ -31,7 +29,7 @@
         <?php
             $db = new Database();
             $project = new Project($db);
-            $projects = $project->listeProjets();
+            $projects = $project->listeProjets(3); //3 projets au début
         ?>
 
 
@@ -42,11 +40,10 @@
                     <article>
                         <h3><?php echo $project['title']; ?></h3>
                         <img src="<?php echo $project['image']; ?>" alt="illustration du projet <?php echo $project['title']; ?>">
-                        <a href="details.php">Lire plus</a>
+                        <a href="details.php?id=<?php echo $project['id']; ?>">Lire plus</a>
                     </article>
                 <?php endforeach; ?>
             </nav>
-            
             <button id="voir-plus">Charger plus de projets</button>
         </section>
         <section id="contact">
@@ -80,5 +77,6 @@
     </main>
     <?php include "PHP/footer.php"; ?>
     <script src="JS/form.js"></script>
+    <script src="AJAX/ajax.js"></script>
 </body>
 </html>
