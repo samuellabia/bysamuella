@@ -1,11 +1,12 @@
-<?php include 'DB/database.php'; ?>
+<?php include 'DB/database.php';
+require_once "PHP/lang.php"; ?>
 <!doctype html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/style.css">
-    <title>Portfolio de JELDI</title>
+    <title>Portfolio</title>
 </head>
 
 <body>
@@ -13,8 +14,9 @@
     <main>
         <section>
             <img src="IMG/Moi.jpg" alt="Photo de mon bitmoji">
+            
             <p>
-                Bienvenue sur mon site web ! Ici, vous trouverez une collection de projets qui m'inspirent et me passionnent.
+                <?php echo $TRAD["bienvenue"]; ?>
             </p>
 
         </section>
