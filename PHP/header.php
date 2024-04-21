@@ -1,27 +1,23 @@
 <header>
+    <nav>
+        <ul>
+            <a href="index.php"> ACCUEIL</a>
+            <a href="#about">A PROPOS</a>
+            <a href="#contact">CONTACT</a> 
 
-        <nav>
-            <ul>
-                <a href="index.html"> ACCUEIL</a>
-                <a href="#about">A PROPOS</a>
-                <a href="#contact">CONTACT</a> <!--contient mon formulaire de contact-->
-                <select id="langSelect">
+            <!--<select id="langSelect">
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+            </select>-->
+            
+            <form action="" method="get">
+                <select name="lang" onchange="this.form.submit()">
                     <option value="fr">Français</option>
                     <option value="en">English</option>
                 </select>
-
-
-                <form action="" method="get" id="recherche">
-                    <label for="search"></label>
-                    <input type="text" id="search" name="search">
-                    <input type="submit" value="Rechercher">
-                </form>
-            </ul>
-
-            <!--<img src="IMG/Jb_logo.svg" alt="#">-->
-        </nav>
-        <img src="IMG/header.webp" alt="Image représentant la programmation informatique">
-        <h1>JELDI BIA SAMUELLA</h1>
-
-
-    </header>
+            </form>
+        </ul>
+    </nav>
+    <img src="IMG/header.webp" alt="Image représentant le dévéloppement web">
+    <h1>MON PORTFOLIO</h1>
+</header>
