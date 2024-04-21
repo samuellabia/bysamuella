@@ -7,4 +7,4 @@ if (isset($_GET["lang"])) {
 }
 
 
-require_once ($lang. '.php');
+require_once $lang. '.php';
