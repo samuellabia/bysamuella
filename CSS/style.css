@@ -13,8 +13,7 @@ body{
     min-height:100dvh;
     display:grid;
     grid-template-rows: auto 1fr auto;
-    grid-template-columns:minmax(0,1fr);
-    
+    grid-template-columns:minmax(0,1fr); 
 }
 
 
@@ -59,7 +58,7 @@ header h1 {
 main section:nth-child(1){
     display:flex;
     flex-direction:row; /*  photo et le paragraphe.*/
-    justify-content:space-evenly;
+    justify-content:space-between;
     align-items:center;
 
     img{
@@ -68,6 +67,7 @@ main section:nth-child(1){
     }
     p{
         text-align:justify;
+        font-size: larger;
     }
 }
 main section:nth-child(2){
@@ -84,15 +84,6 @@ main section nav{
     gap: 15px;
 
 }
-
-
-/*#about{
-    width:100%;
-    display: flex;
-    flex-direction:column;
-    justify-content:space-between;
-    align-items: center;
-}*/
 
 article{
     display: flex;
@@ -134,9 +125,9 @@ main form{
 }
 
 main form div{
-    display:grid;
-    grid-template-columns:70px 1fr;/*label et input*/
-    grid-gap:15px;
+
+    display:flex;
+    flex-direction:column;
     margin: 20px 20px;
 }
 
