@@ -1,23 +1,20 @@
 <header>
     <nav>
         <ul>
-            <a href="index.php"> ACCUEIL</a>
-            <a href="#about">A PROPOS</a>
-            <a href="#contact">CONTACT</a> 
+            <a href="index.php"> <?php echo $TRAD["accueil"] ?></a>
+            <a href="#about"><?php echo $TRAD["propos"] ?></a>
+            <a href="#contact"><?php echo $TRAD["contact"] ?></a> 
 
-            <!--<select id="langSelect">
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-            </select>-->
-            
+
             <form action="" method="get">
                 <select name="lang" onchange="this.form.submit()">
-                    <option value="fr">Français</option>
+                    <option value="langue"> Langue</option>
                     <option value="en">English</option>
+                    <option value="fr">Français</option>
                 </select>
             </form>
         </ul>
     </nav>
     <img src="IMG/header.webp" alt="Image représentant le dévéloppement web">
-    <h1>MON PORTFOLIO</h1>
+    <h1><?php echo $TRAD["portfolio"] ?></h1>
 </header>
