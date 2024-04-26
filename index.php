@@ -1,7 +1,8 @@
 <?php include 'DB/database.php';
-require_once "PHP/lang.php"; ?>
+require_once "PHP/lang.php";?>
+
 <!doctype html>
-<html lang="fr">
+<html lang="<?php echo $lang;?>" >
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,44 +28,43 @@ require_once "PHP/lang.php"; ?>
         ?>
 
         <section class="projets">
-            <h2>Mes projets</h2>
+
+            <h2> <?php echo $TRAD["projets"]  ?> </h2>
             <nav>
                 <?php foreach ($projects as $project) : ?>
                     <article>
                         <h3><?php echo $project['title']; ?></h3>
                         <img src="<?php echo $project['image']; ?>" alt="illustration du projet <?php echo $project['title']; ?>">
-                        <a href="details.php?id=<?php echo $project['id']; ?>">Lire plus</a>
+                        <a href="details.php?id=<?php echo $project['id']; ?>" > <?php echo $TRAD["lire"]  ?></a>
                     </article>
                 <?php endforeach; ?>
             </nav>
-            <button id="voir-plus">Charger plus de projets</button>
+            <button id="voir-plus"><?php echo $TRAD["lire"] ?></button>
         </section>
         <section id="contact">
-            <h2>Me contacter</h2>
+            <h2><?php echo $TRAD["contacter"] ?></h2>
             <form action="DB/database.php" method="post">
                 <div class="errors"></div>
                 <div>
-                    <label for="firstname">Prénom</label>
+                    <label for="firstname"><?php echo $TRAD["prenom"] ?></label>
                     <input type="text" id="firstname" name="user_firstname"  />
                 </div>
 
                 <div>
-                    <label for="lastname">Nom</label>
+                    <label for="lastname"><?php echo $TRAD["nom"]?></label>
                     <input type="text" id="lastname" name="user_name"  />
                 </div>
 
                 <div>
-                    <label for="mail">Email</label>
+                    <label for="mail"><?php echo $TRAD["email"] ?></label>
                     <input type="email" id="mail" name="user_mail"  />
                 </div>
 
                 <div>
-                    <label for="msg">Message</label>
+                    <label for="msg"><?php echo $TRAD["message"] ?></label>
                     <textarea id="msg" cols="40" rows="10" name="user_message"  ></textarea>
                 </div>
-
-
-                <button type="submit">Envoyer le message</button>
+                <button type="submit"><?php echo $TRAD["envoyer"] ?></button>
             </form>
         </section>
     </main>
