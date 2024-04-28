@@ -9,7 +9,7 @@ html{
 
 @media only  screen and (max-width:720px) {
     html{
-        font-size:12px; /*à 16*/
+        font-size:12px;
     }
 
     
@@ -17,15 +17,15 @@ html{
 
 @media only screen and (max-width:900px) {
     html{
-        font-size:13px; /*à 19 */
+        font-size:13px;
 
     }
     
 }
 
-@media only  screen and (max-width:) {
+@media only  screen and (max-width:1080) {
     html{
-        font-size:14px; /*à 20*/
+        font-size:14px;
     }
     
 }
