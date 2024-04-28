@@ -5,17 +5,13 @@
             <a href="index.php?lang=<?php echo $lang; ?>"> <?php echo $TRAD["accueil"] ?></a>
             <a href="index.php?lang=<?php echo $lang; ?>#about"><?php echo $TRAD["propos"] ?></a>
             <a href="index.php?lang=<?php echo $lang; ?>#contact"><?php echo $TRAD["contact"] ?></a>
-
-            <form action="" method="get">
-                <select name="lang" onchange="this.form.submit()">
-                <option value="en"> Langue</option>
-                <option value="en"> English</option>
-                <option value="fr"> Français</option>
-                </select>
-            </form>
+            
+            <li><a href="?lang=fr">FR</a></li>
+            <li><a href="?lang=en">EN</a></li> 
         </ul>
     </nav>
     <form action="search.php" method="get" id="search">
+        <label for="recherche"></label>
         <input type="text" name="recherche" id="recherche" placeholder="Rechercher...">
         <button type="submit"><?php echo $TRAD["chercher"] ?></button>
     </form>
