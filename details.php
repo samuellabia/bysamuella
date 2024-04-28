@@ -1,4 +1,4 @@
-<?php //require_once "PHP/lang.php";
+<?php
 include "DB/database.php";?>
 
 <!DOCTYPE html>
@@ -20,7 +20,7 @@ if (isset($_GET['id'])) {
 }
 ?>
 
-<body class="detail">
+<body class="details">
     <?php include "PHP/header.php"; ?>
     <main>
         <article>
