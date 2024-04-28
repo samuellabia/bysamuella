@@ -3,6 +3,17 @@
     box-sizing: border-box;
 }
 
+@media only  screen and (max-width:720px) {
+    
+}
+
+@media only screen and (max-width:900px) {
+    
+}
+
+@media only  screen and (max-width:) {
+    
+}
 html{
     font-size:16px;
     font-family:'Abril Fatface', sans-serif;
@@ -20,6 +31,7 @@ body{
 /*HEADER*/
 header{
     position:relative; /*par rapport à ma photo */
+    margin-bottom: 2.5rem;
 }
 header  nav ul{
     margin: 1px;
@@ -29,7 +41,6 @@ header  nav ul{
     gap:1rem; /*espace de la taille de 16 px;*/
     justify-content:flex-end; 
     align-items: center;
-    /*background-color: #8C7B65;*/ /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
 }
 
 img{
@@ -93,9 +104,15 @@ main .projets{
     text-align: center;
 }
 
+h1{
+    background-color: yellow;
+}
+h2{
+    background-color: orange;
+}
 h1,h2{
     text-align: center;
-    background-color:orange;
+    /*background-color:orange;*/
     width:100%;
 }
 
@@ -158,6 +175,10 @@ main button:hover{
     justify-content:center;
 }
 
+body.detail #search {
+    display: none;
+}
+
 #search input[type="search"] {
     border-radius: 15px; /* Rendre le champ de recherche arrondi */
 }
@@ -175,6 +196,7 @@ main form div label.error{
 /*FOOTER*/
 
 footer {
+    margin-top: 2.5rem;
     background-color :black;
     color:white;
 }

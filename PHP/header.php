@@ -3,8 +3,8 @@
     <nav>
         <ul>
             <a href="index.php?lang=<?php echo $lang; ?>"> <?php echo $TRAD["accueil"] ?></a>
-            <a href="#about"><?php echo $TRAD["propos"] ?></a>
-            <a href="#contact"><?php echo $TRAD["contact"] ?></a>
+            <a href="index.php?lang=<?php echo $lang; ?>#about"><?php echo $TRAD["propos"] ?></a>
+            <a href="index.php?lang=<?php echo $lang; ?>#contact"><?php echo $TRAD["contact"] ?></a>
 
             <form action="" method="get">
                 <select name="lang" onchange="this.form.submit()">
@@ -16,10 +16,10 @@
         </ul>
     </nav>
     <form action="search.php" method="get" id="search">
-        <input type="search" name="recherche" id="recherche" placeholder="Rechercher...">
-        <button type="submit">Rechercher</button>
+        <input type="text" name="recherche" id="recherche" placeholder="Rechercher...">
+        <button type="submit"><?php echo $TRAD["chercher"] ?></button>
     </form>
-    <img src="IMG/fond.jpeg" alt="Image de fond">
+    <img src="IMG/fond.jpeg" alt="<?php echo $TRAD["fond"] ?>">
     <h1><?php echo $TRAD["portfolio"] ?></h1>
 
 </header>

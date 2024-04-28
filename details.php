@@ -1,4 +1,4 @@
-<?php require_once "PHP/lang.php";
+<?php //require_once "PHP/lang.php";
 include "DB/database.php";?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ if (isset($_GET['id'])) {
                 <?php echo $projectDetails['description']; ?>
             </p>
             <h2>Illustration</h2>
-            <img src="<?php echo $projectDetails['image']; ?>" alt="visualisation du ">
+            <img src="<?php echo $projectDetails['image']; ?>" alt="visualisation du <?php echo $projectDetails['title'] ?>">
         </article>
     </main>
     <?php include  "PHP/footer.php"; ?>

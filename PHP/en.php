@@ -8,6 +8,9 @@ $TRAD=array(
     "portfolio"=> "My portfolio",
     "contacter"=> "Contact me",
     "projets" => "My projects",
+    "bitmoji"=> "Picture  of my bitmoji",
+    "fond" => "bacground picture before the bitmoji",
+    
     // champs de formulaire
     "prenom" => "First name",
     "nom" => "Last name",
@@ -15,4 +18,5 @@ $TRAD=array(
     "message" => "Message",
     "envoyer" => "Send message",
     "lire"=> "Read more about",
-    "charger" =>"Load more projects");
+    "charger" =>"Load more projects",
+    "chercher" => "search");
