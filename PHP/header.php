@@ -8,13 +8,16 @@
 
             <form action="" method="get">
                 <select name="lang" onchange="this.form.submit()">
-                    <option value="langue">Langue</option>
-                    <option value="en"> <?php if($lang == 'en') echo 'selected'; ?>English</option>
-                    <option value="fr"> <?php if($lang == 'fr') echo 'selected'; ?>Français</option>
+                    <option value="en"> English</option>
+                    <option value="fr"> Français</option>
                 </select>
+            </form>
+            <form action="PHP/search.php" method="get">
+                <input type="search" name="recherche" id="recherche" placeholder="Rechercher...">
+                <button type="submit">Rechercher</button>
             </form>
         </ul>
     </nav> 
-    <img src="IMG/header.webp" alt="Image représentant le dévéloppement web">
+    <img src="IMG/fond.jpeg" alt="Image de fond">
     <h1><?php echo $TRAD["portfolio"] ?></h1>
 </header>
