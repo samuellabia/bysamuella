@@ -1,7 +1,8 @@
+<?php require_once "PHP/lang.php"; ?>
 <header>
     <nav>
         <ul>
-            <a href="index.php"> <?php echo $TRAD["accueil"] ?></a>
+            <a href="index.php?lang=<?php echo $lang; ?>"> <?php echo $TRAD["accueil"] ?></a>
             <a href="#about"><?php echo $TRAD["propos"] ?></a>
             <a href="#contact"><?php echo $TRAD["contact"] ?></a>
 
