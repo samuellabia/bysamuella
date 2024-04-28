@@ -1,7 +1,7 @@
 <?php include 'DB/database.php';
 require_once "PHP/lang.php";?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="<?php echo $lang;?>" >
 <head>
     <meta charset="UTF-8">

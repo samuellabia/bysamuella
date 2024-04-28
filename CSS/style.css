@@ -9,7 +9,7 @@ html{
 }
 
 body{
-    background-color:#f2ebe5;
+    background-color:grey;
     min-height:100dvh;
     display:grid;
     grid-template-rows: auto 1fr auto;
@@ -29,7 +29,7 @@ header  nav ul{
     gap:1rem; /*espace de la taille de 16 px;*/
     justify-content:flex-end; 
     align-items: center;
-    background-color:#647295; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
+    background-color: #8C7B65; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
 }
 
 img{
@@ -39,9 +39,8 @@ img{
 
 }
 
-
 header h1 {
-    font-family:"Abril Fatface",serif;
+    font-size:3rem;
     position: absolute;
     background-color:black;
     top: 50%;
@@ -50,8 +49,6 @@ header h1 {
     color: #fff; /* changez la couleur en fonction de votre image */
     mix-blend-mode:lighten; /* le texte se fond dans l'image */
 }
-
-
 
 
 /*MAIN*/
@@ -73,15 +70,14 @@ main section:nth-child(1){
 main section:nth-child(2){
     display:flex;
     flex-direction:column;
-    
-    
 }
 
 main section nav{
     display:grid;
     grid-template-rows:1fr 1fr; /*photo et court paragraphe descriptif*/
     grid-template-columns:repeat(auto-fit,minmax(400px,1fr)); /*différents projets*/
-    gap: 15px;
+    row-gap:1.5rem;
+    column-gap:1.5rem;
 
 }
 
@@ -94,6 +90,7 @@ article{
 
 main .projets{
     grid-row:2;
+    text-align: center;
 }
 
 h1{
@@ -102,6 +99,9 @@ h1{
     width:100%;
 }
 
+h2{
+    text-align:center;
+}
 
 .projets img{
     width:100%;
@@ -113,8 +113,8 @@ h1{
 
 #contact{
     background-color: #fff;
-    /*max-width:600px;*/
-    margin:auto; /*centrer mon formulaire*/
+    color:black;
+    margin:auto;/*centrer mon formulaire*/
     padding:20px;
     border-radius: 5px; /*arrondir les bords*/
 }
@@ -131,7 +131,6 @@ main form div{
     margin: 20px 20px;
 }
 
-
 main form div input,main form div textarea {
     width: 100%;
     padding: 10px;
@@ -141,15 +140,14 @@ main form div input,main form div textarea {
     outline:none; /*enlever la ligne rouge qui s'affiche dès qu'on est dans l'un d'entre eux */
 }
 
-
-
-
-
 main button {
+    display: block; /* Le bouton prendra toute la largeur de son conteneur parent */
+    margin: auto; /* Centre le bouton */
+    text-align: center;
     padding: 10px 20px;
     border: none;
     border-radius: 4px;
-    background-color:#d69f3a;
+    background-color:#8C7B65;
     cursor: pointer;
 }
 
@@ -158,10 +156,18 @@ main button:hover{
     background-color:#ebc174;
 }
 
+/*recherche*/
+#search{
+    display: flex;
+    justify-content:center;
+}
 
+#search input[type="search"] {
+    border-radius: 15px; /* Rendre le champ de recherche arrondi */
+}
 
 /*validation*/
-main form div input.error,main form div textarea.error{
+main #form div input.error,main form div textarea.error{
     border: 1px solid red; /*bordure devient rouge quand il y a une erreur*/
     background-color: #FFCCCC; /* couleur de fond rouge clair */
 }
@@ -170,9 +176,16 @@ main form div label.error{
     color:red;
 }
 
-
 /*FOOTER*/
 
 footer {
-    background-color:#647295;
+    background-color :#8C7B65;
+}
+
+/*liens */
+a{
+    text-decoration: none; /*suppression du surlignement*/
+}
+a:visited,a:link{
+    color:white;
 }
