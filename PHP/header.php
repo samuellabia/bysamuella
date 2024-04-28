@@ -18,6 +18,5 @@
     <div class="results"></div>
     <img src="IMG/fond.jpeg" alt="<?php echo $TRAD["fond"] ?>">
     <h1><?php echo $TRAD["portfolio"] ?></h1>
-
 </header>
-<script src="search.js"></script>
+<script src="JS/search.js"></script>

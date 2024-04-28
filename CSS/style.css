@@ -61,6 +61,17 @@ header  nav ul{
     }
 }
 
+.details {
+    header nav ul li {
+        display: none;
+    }
+    #search{
+        display:none;
+    }
+
+
+}
+
 img{
     width:100%;
     border-radius:15px;
@@ -181,6 +192,7 @@ main button {
     border-radius: 4px;
     background-color:#8C7B65;
     cursor: pointer;
+
 }
 
 /*une couleur plus claire quand on clique sur mon button*/

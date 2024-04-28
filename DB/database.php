@@ -126,7 +126,14 @@ class Project
 
         }
     }
-    
+    function chercher($terms) {
+        $stmt = $this->db->pdo->prepare(
+            "SELECT id, titre FROM projets
+            WHERE titre LIKE CONCAT('%', :search, '%')"
+        );
+        $stmt->execute(['search' => $terms]);
+        return $stmt->fetchAll();
+    }
 
     public function listeProjets($limit = null, $offset = 0) {
         $projets = array();

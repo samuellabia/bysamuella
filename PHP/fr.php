@@ -20,5 +20,5 @@ $TRAD=array(
     "envoyer" => "Envoyer le message",
     "lire"=> "Lire plus à propos",
     "charger"=> "Charger plus de projets",
-    "chercher" => "search"
+    "chercher" => "chercher"
 );
