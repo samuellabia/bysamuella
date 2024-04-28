@@ -5,7 +5,7 @@
             <a href="index.php?lang=<?php echo $lang; ?>"> <?php echo $TRAD["accueil"] ?></a>
             <a href="index.php?lang=<?php echo $lang; ?>#about"><?php echo $TRAD["propos"] ?></a>
             <a href="index.php?lang=<?php echo $lang; ?>#contact"><?php echo $TRAD["contact"] ?></a>
-            
+
             <li><a href="?lang=fr">FR</a></li>
             <li><a href="?lang=en">EN</a></li> 
         </ul>
@@ -19,3 +19,4 @@
     <h1><?php echo $TRAD["portfolio"] ?></h1>
 
 </header>
+<script src="search.js"></script>
