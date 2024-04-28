@@ -128,8 +128,8 @@ class Project
     }
     function chercher($terms) {
         $stmt = $this->db->pdo->prepare(
-            "SELECT id, titre FROM projets
-            WHERE titre LIKE CONCAT('%', :search, '%')"
+            "SELECT id, title FROM projets
+            WHERE title LIKE CONCAT('%', :search, '%')"
         );
         $stmt->execute(['search' => $terms]);
         return $stmt->fetchAll();
