@@ -7,6 +7,7 @@ $TRAD=array(
     "portfolio"=> "Mon portfolio",
     "bienvenue"=>"Bienvenue sur mon site web ! Ici, vous trouverez une collection de projets qui m'inspirent et me passionnent. ",
     "contacter"=> "Me contacter",
+    "projets" => "Mes projets",
 
     
     //champs de formulaire
