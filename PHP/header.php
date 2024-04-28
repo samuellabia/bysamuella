@@ -15,6 +15,7 @@
         <input type="text" name="recherche" id="recherche" placeholder="Rechercher...">
         <button type="submit"><?php echo $TRAD["chercher"] ?></button>
     </form>
+    <div class="results"></div>
     <img src="IMG/fond.jpeg" alt="<?php echo $TRAD["fond"] ?>">
     <h1><?php echo $TRAD["portfolio"] ?></h1>
 
