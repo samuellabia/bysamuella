@@ -39,7 +39,7 @@ require_once "PHP/lang.php";?>
                     </article>
                 <?php endforeach; ?>
             </nav>
-            <button id="voir-plus"><?php echo $TRAD["lire"] ?></button>
+            <button id="voir-plus"><?php echo $TRAD["charger"] ?></button>
         </section>
         <section id="contact">
             <h2><?php echo $TRAD["contacter"] ?></h2>

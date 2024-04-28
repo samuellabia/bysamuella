@@ -15,4 +15,4 @@ $TRAD=array(
     "message" => "Message",
     "envoyer" => "Send message",
     "lire"=> "Read more about",
-);
+    "charger" =>"Load more projects");
