@@ -3,19 +3,33 @@
     box-sizing: border-box;
 }
 
+html{
+    font-size:16px;
+}
+
 @media only  screen and (max-width:720px) {
+    html{
+        font-size:12px; /*à 16*/
+    }
+
     
 }
 
 @media only screen and (max-width:900px) {
+    html{
+        font-size:13px; /*à 19 */
+
+    }
     
 }
 
 @media only  screen and (max-width:) {
+    html{
+        font-size:14px; /*à 20*/
+    }
     
 }
 html{
-    font-size:16px;
     font-family:'Abril Fatface', sans-serif;
 }
 
@@ -41,12 +55,17 @@ header  nav ul{
     gap:1rem; /*espace de la taille de 16 px;*/
     justify-content:flex-end; 
     align-items: center;
+
+    li{
+        list-style-type: none;
+    }
 }
 
 img{
     width:100%;
     border-radius:15px;
     margin:4px;
+    height:15rem;
 
 }
 
@@ -170,18 +189,35 @@ main button:hover{
 }
 
 /*recherche*/
-#search{
+#search {
+    width: 100%; /* Occupe toute la largeur */
     display: flex;
-    justify-content:center;
+    justify-content: center; /* Centre le formulaire */
+    margin-bottom: 1rem; /* Espacement en dessous du formulaire */
+    margin-top:1rem;
 }
 
-body.detail #search {
+#search input[type="text"] {
+    width: 100%; /* Occupe toute la largeur */
+    border-radius: 20px; /* Bords arrondis */
+    padding: 0.5rem; /* Espacement à l'intérieur du champ de texte */
+    border: 1px solid #ccc; /* Bordure du champ de texte */
+    outline: none; /* Enlève la bordure de focus */
+}
+
+#search button[type="submit"] {
+    border-radius: 20px; /* Bords arrondis */
+    padding: 0.5rem 1rem; /* Espacement à l'intérieur du bouton */
+    margin-left: -1px; /* Alignement avec le champ de texte */
+    border: 1px solid #ccc; /* Bordure du bouton */
+    background-color: #f8f8f8; /* Couleur de fond du bouton */
+    cursor: pointer; /* Change le curseur en main */
+}
+
+body .detail #search {
     display: none;
 }
 
-#search input[type="search"] {
-    border-radius: 15px; /* Rendre le champ de recherche arrondi */
-}
 
 /*validation*/
 main #form div input.error,main form div textarea.error{
