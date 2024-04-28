@@ -29,7 +29,7 @@ header  nav ul{
     gap:1rem; /*espace de la taille de 16 px;*/
     justify-content:flex-end; 
     align-items: center;
-    background-color: #8C7B65; /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
+    /*background-color: #8C7B65;*/ /* Aligne les éléments enfants (div#top-row, div#bottom-row) verticalement */
 }
 
 img{
@@ -93,14 +93,10 @@ main .projets{
     text-align: center;
 }
 
-h1{
+h1,h2{
     text-align: center;
-    background-color:#9f496e;
+    background-color:orange;
     width:100%;
-}
-
-h2{
-    text-align:center;
 }
 
 .projets img{
@@ -179,7 +175,8 @@ main form div label.error{
 /*FOOTER*/
 
 footer {
-    background-color :#8C7B65;
+    background-color :black;
+    color:white;
 }
 
 /*liens */

@@ -10,5 +10,6 @@ $loadedProjects = isset($_GET['loadedProjects']) ? intval($_GET['loadedProjects'
 // Charger plus de projets à partir de la base de données
 $projects = $project->listeProjets(3, $loadedProjects); // Charger 3 projets supplémentaires
 
+
 // Transformer les données en JSON
 echo json_encode($projects);

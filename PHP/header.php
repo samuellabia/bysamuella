@@ -8,16 +8,18 @@
 
             <form action="" method="get">
                 <select name="lang" onchange="this.form.submit()">
-                    <option value="en"> English</option>
-                    <option value="fr"> Français</option>
+                <option value="en"> Langue</option>
+                <option value="en"> English</option>
+                <option value="fr"> Français</option>
                 </select>
             </form>
-            <form action="PHP/search.php" method="get">
-                <input type="search" name="recherche" id="recherche" placeholder="Rechercher...">
-                <button type="submit">Rechercher</button>
-            </form>
         </ul>
-    </nav> 
+    </nav>
+    <form action="search.php" method="get" id="search">
+        <input type="search" name="recherche" id="recherche" placeholder="Rechercher...">
+        <button type="submit">Rechercher</button>
+    </form>
     <img src="IMG/fond.jpeg" alt="Image de fond">
     <h1><?php echo $TRAD["portfolio"] ?></h1>
+
 </header>
