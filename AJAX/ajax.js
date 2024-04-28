@@ -1,7 +1,6 @@
 document.getElementById('voir-plus').addEventListener('click', function() {
     // Comptage du nombre de projets déjà chargés
-    var loadedProjects = document.querySelectorAll('.projets article').length;
-
+    var loadedProjects = document.querySelectorAll('.projets article').length; //on compte le nombre de projets déjà présents sur notre page
     fetch('AJAX/loadProjects.php?loadedProjects=' + loadedProjects)
         .then(response => response.json())
         .then(data => {
@@ -14,8 +13,9 @@ document.getElementById('voir-plus').addEventListener('click', function() {
                 img.src = project.image;
                 img.alt = 'illustration du projet ' + project.title;
                 var a = document.createElement('a');
-                a.href = 'details.php?id=' + project.id;
+                a.href ='details.php?id=' + project.id;
                 a.textContent = 'Lire plus';
+                
                 article.append(h3, img, a);
                 document.querySelector('.projets nav').appendChild(article);
             });
