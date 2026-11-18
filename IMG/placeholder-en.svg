@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" role="img" aria-label="Image coming soon">
+  <defs>
+    <pattern id="g" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#22d3ee" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="480" fill="#0d141e"/>
+  <rect width="800" height="480" fill="url(#g)"/>
+  <rect x="40" y="40" width="720" height="400" rx="16" fill="none" stroke="#22d3ee" stroke-opacity=".5" stroke-width="3" stroke-dasharray="14 10"/>
+  <text x="400" y="252" text-anchor="middle" font-family="monospace" font-size="34" fill="#39ff88">&lt;Image coming soon /&gt;</text>
+</svg>

@@ -3,30 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#070b11">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Projet | Samuella</title>
 </head>
 
 <body class="details">
     <header>
-        <nav>
+        <nav class="barre">
+            <a class="logo" href="index.html">&lt;samuella /&gt;</a>
             <ul>
-                <li><a href="index.html" data-i18n="accueil">Accueil</a></li>
                 <li><a href="index.html#projets" data-i18n="projets">Mes projets</a></li>
                 <li><a href="index.html#contact" data-i18n="contact">Contact</a></li>
-                <li><a href="?lang=fr" data-lang="fr">FR</a></li>
-                <li><a href="?lang=en" data-lang="en">EN</a></li>
+                <li><a href="?lang=en" id="langue" class="langue" lang="en" aria-label="Switch to English">EN</a></li>
             </ul>
         </nav>
-        <img src="IMG/fond.jpeg" alt="Image de fond du portfolio" data-i18n-alt="fond">
     </header>
 
     <main>
         <div id="projet"></div>
     </main>
 
+    <dialog id="zoom">
+        <button type="button" class="fermer" data-i18n="fermer">Fermer</button>
+        <div class="zoom-contenu"></div>
+    </dialog>
+
     <footer>
-        <small>Copyright © <span id="annee">2026</span> JELDI BIA SAMUELLA</small>
+        <small>© <span id="annee">2026</span> Samuella Jeldi Bia</small>
     </footer>
 
     <script src="JS/data.js"></script>

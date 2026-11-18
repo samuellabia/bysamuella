@@ -4,54 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de Samuella Jeldi Bia, élève ingénieure en systèmes intelligents et autonomes.">
+    <meta name="theme-color" content="#070b11">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Portfolio | Samuella Jeldi Bia</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="barre">
+            <a class="logo" href="index.html">&lt;samuella /&gt;</a>
             <ul>
-                <li><a href="#about" data-i18n="accueil">Accueil</a></li>
                 <li><a href="#about" data-i18n="propos">À propos</a></li>
                 <li><a href="#projets" data-i18n="projets">Mes projets</a></li>
                 <li><a href="#contact" data-i18n="contact">Contact</a></li>
-                <li><a href="?lang=fr" data-lang="fr">FR</a></li>
-                <li><a href="?lang=en" data-lang="en">EN</a></li>
+                <li><a href="?lang=en" id="langue" class="langue" lang="en" aria-label="Switch to English">EN</a></li>
             </ul>
         </nav>
-        <form id="search" role="search">
-            <label for="recherche" class="sr-only" data-i18n="chercher">Chercher</label>
-            <input type="text" name="recherche" id="recherche" placeholder="Rechercher..." data-i18n-placeholder="placeholder">
-            <button type="submit" data-i18n="chercher">Chercher</button>
-        </form>
-        <div class="results" aria-live="polite"></div>
-        <img src="IMG/fond.jpeg" alt="Image de fond du portfolio" data-i18n-alt="fond">
-        <h1 data-i18n="portfolio">Mon portfolio</h1>
+
+        <div class="hero">
+            <img src="IMG/fond.jpeg" alt="Image de fond du portfolio" data-i18n-alt="fond">
+            <div class="hero-texte">
+                <p class="invite">~/portfolio $ whoami</p>
+                <h1>Samuella Jeldi Bia</h1>
+                <p class="sous-titre"><span data-i18n="metier">Élève ingénieure en systèmes intelligents et autonomes</span><span class="curseur" aria-hidden="true">_</span></p>
+            </div>
+        </div>
     </header>
 
     <main>
         <section id="about">
             <img src="IMG/Moi.jpg" alt="Photo de mon bitmoji" data-i18n-alt="bitmoji">
-            <p data-i18n="bienvenue">
-                Bienvenue sur mon site web ! Ici, vous trouverez une collection de projets qui m'inspirent et me passionnent.
-            </p>
+            <div>
+                <h2 data-i18n="propos">À propos</h2>
+                <p data-i18n="bienvenue">
+                    Je travaille à la frontière entre logiciel et matériel : robotique, vision par ordinateur et algorithmique. Je recherche un stage à partir de juillet 2027.
+                </p>
+            </div>
         </section>
 
         <section class="projets" id="projets">
             <h2 data-i18n="projets">Mes projets</h2>
-            <nav id="liste-projets"></nav>
+            <form id="search" role="search">
+                <label for="recherche" class="sr-only" data-i18n="chercher">Chercher</label>
+                <input type="text" name="recherche" id="recherche" placeholder="Rechercher..." data-i18n-placeholder="placeholder">
+                <button type="submit" data-i18n="chercher">Chercher</button>
+            </form>
+            <div class="results" aria-live="polite"></div>
+            <div id="liste-projets"></div>
         </section>
 
         <section id="contact">
             <h2 data-i18n="contacter">Écrits et contact</h2>
-            <p data-i18n="ecrits">Mes essais sont publiés sur Contre-jour (Substack).</p>
+            <p id="phrase-ecrits" hidden></p>
+            <ul id="articles"></ul>
             <ul id="liens"></ul>
         </section>
     </main>
 
     <footer>
-        <small>Copyright © <span id="annee">2026</span> JELDI BIA SAMUELLA</small>
+        <small>© <span id="annee">2026</span> Samuella Jeldi Bia</small>
     </footer>
 
     <script src="JS/data.js"></script>
