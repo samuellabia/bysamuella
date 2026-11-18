@@ -7,27 +7,22 @@ html{
     font-size:16px;
 }
 
-@media only  screen and (max-width:720px) {
+@media only screen and (max-width:1080px) {
     html{
-        font-size:12px;
+        font-size:14px;
     }
-
-    
 }
 
 @media only screen and (max-width:900px) {
     html{
         font-size:13px;
-
     }
-    
 }
 
-@media only  screen and (max-width:1080) {
+@media only screen and (max-width:720px) {
     html{
-        font-size:14px;
+        font-size:12px;
     }
-    
 }
 html{
     font-family:'Abril Fatface', sans-serif;
@@ -62,9 +57,6 @@ header  nav ul{
 }
 
 .details {
-    header nav ul li {
-        display: none;
-    }
     #search{
         display:none;
     }
@@ -115,8 +107,9 @@ main section:nth-child(2){
 
 main section nav{
     display:grid;
-    grid-template-rows:1fr 1fr; /*photo et court paragraphe descriptif*/
-    grid-template-columns:repeat(auto-fit,minmax(400px,1fr)); /*différents projets*/
+    grid-auto-rows:auto; /*photo et court paragraphe descriptif*/
+    align-items:start;
+    grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr)); /*différents projets*/
     row-gap:1.5rem;
     column-gap:1.5rem;
 
@@ -255,4 +248,61 @@ a{
 }
 a:visited,a:link{
     color:white;
+}
+
+/*AJOUTS : site statique*/
+
+/* texte réservé aux lecteurs d'écran */
+.sr-only{
+    position:absolute;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+    clip:rect(0,0,0,0);
+    white-space:nowrap;
+}
+
+/* résultats de recherche */
+.results{
+    text-align:center;
+    padding:0 1rem;
+}
+
+/* langue active */
+[data-lang][aria-current="true"]{
+    text-decoration:underline;
+}
+
+/* liens dans la section contact (fond blanc) */
+#contact ul{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1rem;
+    justify-content:center;
+    padding:0;
+}
+#contact li{
+    list-style-type:none;
+}
+#contact p{
+    text-align:center;
+}
+#contact a:link,#contact a:visited{
+    color:black;
+    text-decoration:underline;
+}
+
+/* page d'un projet */
+#projet article a{
+    margin-top:1rem;
+}
+.details #projet img{
+    width:100%;
+    max-width:40rem;
+    height:auto;
+    align-self:center;
+}
+.details #projet p{
+    text-align:justify;
+    font-size:larger;
 }
